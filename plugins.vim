@@ -13,6 +13,12 @@ Plug 'junegunn/fzf.vim'         " File Search
 Plug 'ryanoasis/vim-devicons'   " Icon
 Plug 'honza/vim-snippets'       " Snippets
 "Plug 'mhinz/vim-startify'       " Startify
+
+" ----------------- Telescope -------------
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/telescope.nvim'
+
 " ----------------- THEME -------------
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'

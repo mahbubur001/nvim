@@ -15,8 +15,5 @@ let g:gruvbox_invert_selection='0'
 
 highlight ColorColumn ctermbg=0 guibg=grey
 highlight Normal guibg=none
-" highlight LineNr guifg=#ff8659
-" highlight LineNr guifg=#aed75f
-highlight LineNr guifg=#5eacd3
 highlight netrwDir guifg=#5eacd3
 highlight qfFileName guifg=#aed75f
