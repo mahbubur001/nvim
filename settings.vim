@@ -1,9 +1,9 @@
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set formatoptions-=cro                  " Stop newline continution of comments
-set completeopt=menuone,noinsert,noselect
 set nocp                                " Enable Remote edit
 syntax on                               " Enables syntax highlighing
 filetype plugin indent on
+set cot=menuone,noinsert,noselect shm+=c
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed

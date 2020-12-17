@@ -3,7 +3,7 @@ call plug#begin()
 " ----------------- LSP -------------
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-lua/diagnostic-nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 
 Plug 'tpope/vim-fugitive'       " GitHub
@@ -12,12 +12,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'         " File Search
 Plug 'ryanoasis/vim-devicons'   " Icon
 Plug 'honza/vim-snippets'       " Snippets
-"Plug 'mhinz/vim-startify'       " Startify
-
-" ----------------- Telescope -------------
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-lua/telescope.nvim'
+Plug 'mhinz/vim-startify'       " Startify
 
 " ----------------- THEME -------------
 Plug 'gruvbox-community/gruvbox'
