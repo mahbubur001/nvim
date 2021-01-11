@@ -1,10 +1,14 @@
 "Plugins
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 " ----------------- LSP -------------
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-treesitter/nvim-treesitter'
 
+
+" telescope requirements...
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'tpope/vim-fugitive'       " GitHub
 Plug 'tpope/vim-commentary'     " Commentary
@@ -13,6 +17,7 @@ Plug 'junegunn/fzf.vim'         " File Search
 Plug 'ryanoasis/vim-devicons'   " Icon
 Plug 'honza/vim-snippets'       " Snippets
 Plug 'mhinz/vim-startify'       " Startify
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " ----------------- THEME -------------
 Plug 'gruvbox-community/gruvbox'

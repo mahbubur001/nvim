@@ -36,36 +36,11 @@ set signcolumn=yes                      " Always show the signcolumn, otherwise 
 set updatetime=200                      " Faster completion
 "set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set clipboard+=unnamedplus               " Copy paste between vim and everything else
+set undodir=~/.vim/undodir
+set undofile
 set incsearch
 set hlsearch
+set scrolloff=8
 set guifont=Hack\ Nerd\ Font
-" let $NVIM_TUI_ENABLE_TRUE_OLOR=1
-" set mmp=1300
-" set autochdir                           " Your working directory will always be the same as your working directory
-" set foldcolumn=2                        " Folding abilities
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-" au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-cmap w!! w !sudo tee %
-
-" Functions
-
-" Turn spellcheck on for markdown files
-augroup auto_spellcheck
-  autocmd BufNewFile,BufRead *.md setlocal spell
-augroup END
-
-" -----Basic AutoCmd-----
-" Fix tex file type set
-autocmd BufRead,BufNewFile *.tex set filetype=tex
-autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
-
-autocmd FileType tex,latex,markdown setlocal spell spelllang=en_au
-
-" Vertically center document when entering insert mode
-autocmd InsertEnter * norm zz
-
-" Remove trailing whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
