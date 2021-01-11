@@ -3,13 +3,13 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set nocp                                " Enable Remote edit
 syntax on                               " Enables syntax highlighing
 filetype plugin indent on
-set cot=menuone,noinsert,noselect shm+=c
+" set cot=menuone,noinsert,noselect shm+=c
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
-set ruler              			        " Show the cursor position all the time
+" set ruler              			        " Show the cursor position all the time
 set cmdheight=1                         " More space for displaying messages
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
@@ -33,9 +33,8 @@ set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
-set updatetime=200                      " Faster completion
-"set timeoutlen=100                      " By default timeoutlen is 1000 ms
-set clipboard+=unnamedplus               " Copy paste between vim and everything else
+set updatetime=50                       " Faster completion
+set clipboard+=unnamedplus              " Copy paste between vim and everything else
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
@@ -43,4 +42,3 @@ set hlsearch
 set scrolloff=8
 set guifont=Hack\ Nerd\ Font
 set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
