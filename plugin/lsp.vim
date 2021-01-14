@@ -11,7 +11,6 @@ nnoremap <leader>vsd :lua vim.lsp.util.show_line_diagnostics(); vim.lsp.util.sho
 
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 lua require'lspconfig'.tsserver.setup{ on_attach=require'completion'.on_attach }
-lua require'lspconfig'.clangd.setup{ on_attach=require'completion'.on_attach }
-lua require'lspconfig'.pyls.setup{ on_attach=require'completion'.on_attach }
+lua require'lspconfig'.intelephense.setup{ on_attach=require'completion'.on_attach }
 lua require'lspconfig'.gopls.setup{ on_attach=require'completion'.on_attach }
-lua require'lspconfig'.rust_analyzer.setup{ on_attach=require'completion'.on_attach }
+lua require'lspconfig'.cssls.setup{ on_attach=require'completion'.on_attach }

@@ -3,7 +3,7 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set nocp                                " Enable Remote edit
 syntax on                               " Enables syntax highlighing
 filetype plugin indent on
-" set cot=menuone,noinsert,noselect shm+=c
+set cot=menuone,noinsert,noselect shm+=c
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
@@ -35,7 +35,7 @@ set shortmess+=c                        " Don't pass messages to |ins-completion
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 set updatetime=50                       " Faster completion
 set clipboard+=unnamedplus              " Copy paste between vim and everything else
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
 set hlsearch

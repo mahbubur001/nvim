@@ -1,4 +1,4 @@
-set exrc " Wont open project .nvimrc without this here    ____      _ __        _
+set exrc " Wont open project .nvimrc without this here
 source $HOME/.config/nvim/plugins.vim
 
 
@@ -6,14 +6,19 @@ let mapleader = " "
 
 " ------Standard Bindings------
 nnoremap <leader>n :nohlsearch<cr>
-nnoremap <leader>e :Lexplore<cr>
+nnoremap <C-e> :NERDTreeToggle<cr>
+nnoremap - :NERDTreeFind<cr>
 nnoremap <Leader><CR> :e ~/.config/nvim/init.vim<CR>
+nnoremap <Leader>x :bd<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " Better indenting
 vnoremap < <gv
 vnoremap > >gv
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 nnoremap <silent> <TAB> :bnext<CR>              " TAB in general mode will move to text buffer
 nnoremap <silent> <S-TAB> :bprevious<CR>        " SHIFT-TAB will go back
@@ -31,7 +36,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-com! W w "ES
 
 " Functions
 fun! TrimWhitespace()
