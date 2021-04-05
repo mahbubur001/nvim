@@ -8,14 +8,16 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+
+" Better Syntax Highlighting using Tree-Sitter
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " File manager
 Plug 'preservim/nerdtree'
 
 Plug 'tpope/vim-fugitive'       " GitHub
 Plug 'tpope/vim-commentary'     " Commentary
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'         " File Search
 Plug 'ryanoasis/vim-devicons'   " Icon
 Plug 'honza/vim-snippets'       " Snippets
 Plug 'mhinz/vim-startify'       " Startify
@@ -25,7 +27,9 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'jiangmiao/auto-pairs' " Auto pairs and surround for '(' '[' '{' etc.
 Plug 'tpope/vim-surround'
 
-" ----------------- THEME -------------
+Plug 'sbdchd/neoformat' " Formatter plugin
+
+"----------------- THEME -------------
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 call plug#end()

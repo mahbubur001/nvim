@@ -1,7 +1,6 @@
 set exrc " Wont open project .nvimrc without this here
 source $HOME/.config/nvim/plugins.vim
 
-
 let mapleader = " "
 
 " ------Standard Bindings------
@@ -23,10 +22,14 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 nnoremap <silent> <TAB> :bnext<CR>              " TAB in general mode will move to text buffer
 nnoremap <silent> <S-TAB> :bprevious<CR>        " SHIFT-TAB will go back
 
+
+nnoremap <leader>F :Neoformat prettier<CR>
+
 " Alternate way to save
 nnoremap <silent> <C-s> :w<CR>                  " Alternate way to quit
 nnoremap <silent> <C-Q> :wq!<CR>                " Use control-c instead of escape
 nnoremap <silent> <C-c> <Esc>                   " <TAB>: completion.
+imap    jj <Esc>                   " <TAB>: completion.
 inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 
