@@ -3,6 +3,8 @@ call plug#begin('~/.config/nvim/plugged')
 " ----------------- LSP -------------
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-lua/lsp-status.nvim'
+Plug 'nvim-lua/diagnostic-nvim'
 
 " telescope requirements...
 Plug 'nvim-lua/popup.nvim'
