@@ -1,7 +1,7 @@
 set exrc " Wont open project .nvimrc without this here
 source $HOME/.config/nvim/plugins.vim
 
-let mapleader = " "
+        let mapleader = " "
 
 " ------Standard Bindings------
 nnoremap <leader>n :nohlsearch<cr>

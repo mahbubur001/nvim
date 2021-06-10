@@ -27,7 +27,10 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline#extensions#tabline#fnamecollapse = 1
+
+let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#buffers_label = ''
+let g:airline#extensions#tabline#tabs_label = ''
 
 " " Just show the file name
 let g:airline#extensions#tabline#fnamemod = ':t'
@@ -35,3 +38,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
 let g:webdevicons_enable_airline_tabline = 1
+
+" Always show tabs
+set showtabline=2
+

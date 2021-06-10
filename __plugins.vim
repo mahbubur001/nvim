@@ -10,10 +10,10 @@ Plug 'nvim-lua/diagnostic-nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim', { 'do': 'make' }
 
 " Better Syntax Highlighting using Tree-Sitter
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/nvim-treesitter'
 
 " File manager
 Plug 'preservim/nerdtree'
@@ -21,6 +21,7 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'       " GitHub
 Plug 'tpope/vim-commentary'     " Commentary
 Plug 'ryanoasis/vim-devicons'   " Icon
+Plug 'kyazdani42/nvim-web-devicons' " Icons
 Plug 'honza/vim-snippets'       " Snippets
 Plug 'mhinz/vim-startify'       " Startify
 
@@ -29,7 +30,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'jiangmiao/auto-pairs' " Auto pairs and surround for '(' '[' '{' etc.
 Plug 'tpope/vim-surround'
 
-Plug 'sbdchd/neoformat' " Formatter plugin
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " Formatter plugin
 
 "----------------- THEME -------------
 Plug 'gruvbox-community/gruvbox'
