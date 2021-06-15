@@ -32,7 +32,6 @@ nnoremap <silent> <C-c> <Esc>                   " <TAB>: completion.
 imap    jj <Esc>                   " <TAB>: completion.
 inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
-
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
