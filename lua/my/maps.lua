@@ -9,14 +9,14 @@ local nosilent = { noremap = true }
 map('n', ',e', '<cmd>NERDTreeToggle<cr>', opts)
 map('n', '-', '<cmd>NERDTreeFind<cr>', opts)
 map('n', '<leader>x', '<cmd>bd<cr>', opts)
-map('n', 'J', "<cmd>m '>+1<CR>gv=gv<cr>", opts)
-map('n', 'K', "<cmd>m '<-2<CR>gv=gv<cr>", opts)
+-- map('n', 'J', "<cmd>m '>+1<CR>gv=gv<cr>", opts)
+-- map('n', 'K', "<cmd>m '<-2<CR>gv=gv<cr>", opts)
 map('n', ']', '<cmd>bnext<cr>', opts) -- TAB in general mode will move to text buffer
 map('n', '[', '<cmd>bprevious<cr>', opts) -- Go back
-map('n', 'jj', '<ESC>', opts) -- Go back
-map('n', '<c-s>', '<cnd>w', opts) -- Go back
+map('i', 'jj', '<ESC>', opts) -- Go back
+map('n', '<c-s>', '<cmd>w', opts) -- Go back
 -- Allow saving of files as sudo when I forgot to start vim using sudo.
---command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+-- command W :execute ":silent w !sudo tee % > /dev/null" | :edit!
 
 -- packer sync baby
 map('n', '<leader>ps', '<cmd>PackerSync<cr>', opts)

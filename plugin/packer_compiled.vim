@@ -46,7 +46,7 @@ local function save_profiles(threshold)
   _G._packer.profile_output = results
 end
 
-time("Luarocks path setup", true)
+time([[Luarocks path setup]], true)
 local package_path_str = "/Users/mahbubur/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/mahbubur/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/mahbubur/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/mahbubur/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
 local install_cpath_pattern = "/Users/mahbubur/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
@@ -57,8 +57,8 @@ if not string.find(package.cpath, install_cpath_pattern, 1, true) then
   package.cpath = package.cpath .. ';' .. install_cpath_pattern
 end
 
-time("Luarocks path setup", false)
-time("try_loadstring definition", true)
+time([[Luarocks path setup]], false)
+time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
   local success, result = pcall(loadstring(s))
   if not success then
@@ -69,8 +69,8 @@ local function try_loadstring(s, component, name)
   return result
 end
 
-time("try_loadstring definition", false)
-time("Defining packer_plugins", true)
+time([[try_loadstring definition]], false)
+time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["auto-session"] = {
     config = { "\27LJ\2\n¨\1\0\0\6\0\n\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0009\3\5\0039\3\6\3'\5\a\0B\3\2\2'\4\b\0&\3\4\3=\3\t\2B\0\2\1K\0\1\0\26auto_session_root_dir\15/sessions/\vconfig\fstdpath\afn\bvim\1\0\1\14log_level\nerror\nsetup\17auto-session\frequire\0" },
@@ -207,7 +207,7 @@ _G.packer_plugins = {
     path = "/Users/mahbubur/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["session-lens"] = {
-    config = { "\27LJ\2\nï\1\0\0\6\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\27<cmd>SearchSession<cr>\15<leader>ls\6n\20nvim_set_keymap\bapi\bvim\1\0\3\17prompt_title\28Pick your saved session\17shorten_path\1\rwinblend\3\0\nsetup\17session-lens\frequire\0" },
+    config = { "\27LJ\2\nï\1\0\0\6\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\27<cmd>SearchSession<cr>\15<leader>ls\6n\20nvim_set_keymap\bapi\bvim\1\0\3\17prompt_title\28Pick your saved session\17shorten_path\1\rwinblend\3\0\nsetup\17session-lens\frequire\0" },
     loaded = true,
     path = "/Users/mahbubur/.local/share/nvim/site/pack/packer/start/session-lens"
   },
@@ -297,109 +297,109 @@ _G.packer_plugins = {
   }
 }
 
-time("Defining packer_plugins", false)
--- Setup for: nvim-projectconfig
-time("Setup for nvim-projectconfig", true)
-try_loadstring("\27LJ\2\n£\1\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2C<cmd>lua require'nvim-projectconfig'.edit_project_config()<cr>\15<leader>pc\6n\20nvim_set_keymap\bapi\bvim\0", "setup", "nvim-projectconfig")
-time("Setup for nvim-projectconfig", false)
-time("packadd for nvim-projectconfig", true)
-vim.cmd [[packadd nvim-projectconfig]]
-time("packadd for nvim-projectconfig", false)
--- Setup for: diffview.nvim
-time("Setup for diffview.nvim", true)
-try_loadstring("\27LJ\2\nz\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\26<cmd>DiffviewOpen<cr>\15<leader>gd\6n\20nvim_set_keymap\bapi\bvim\0", "setup", "diffview.nvim")
-time("Setup for diffview.nvim", false)
+time([[Defining packer_plugins]], false)
 -- Setup for: lazygit.nvim
-time("Setup for lazygit.nvim", true)
-try_loadstring("\27LJ\2\nu\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\21<cmd>LazyGit<cr>\15<leader>gs\6n\20nvim_set_keymap\bapi\bvim\0", "setup", "lazygit.nvim")
-time("Setup for lazygit.nvim", false)
+time([[Setup for lazygit.nvim]], true)
+try_loadstring("\27LJ\2\nu\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\21<cmd>LazyGit<cr>\15<leader>gs\6n\20nvim_set_keymap\bapi\bvim\0", "setup", "lazygit.nvim")
+time([[Setup for lazygit.nvim]], false)
 -- Setup for: vim-easy-align
-time("Setup for vim-easy-align", true)
+time([[Setup for vim-easy-align]], true)
 try_loadstring("\27LJ\2\n•\1\0\0\6\0\t\0\0176\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\0016\0\0\0009\0\1\0009\0\2\0'\2\a\0'\3\4\0'\4\5\0005\5\b\0B\0\5\1K\0\1\0\1\0\1\fnoremap\2\6v\1\0\1\fnoremap\2\23<cmd>EasyAlign<cr>\aga\6n\20nvim_set_keymap\bapi\bvim\0", "setup", "vim-easy-align")
-time("Setup for vim-easy-align", false)
+time([[Setup for vim-easy-align]], false)
 -- Setup for: vim-latex-preview
-time("Setup for vim-latex-preview", true)
+time([[Setup for vim-latex-preview]], true)
 try_loadstring("\27LJ\2\ns\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\1\fnoremap\2\27:StartLatexPreview<cr>\15<leader>pl\6n\20nvim_set_keymap\bapi\bvim\0", "setup", "vim-latex-preview")
-time("Setup for vim-latex-preview", false)
+time([[Setup for vim-latex-preview]], false)
+-- Setup for: diffview.nvim
+time([[Setup for diffview.nvim]], true)
+try_loadstring("\27LJ\2\nz\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\26<cmd>DiffviewOpen<cr>\15<leader>gd\6n\20nvim_set_keymap\bapi\bvim\0", "setup", "diffview.nvim")
+time([[Setup for diffview.nvim]], false)
+-- Setup for: nvim-projectconfig
+time([[Setup for nvim-projectconfig]], true)
+try_loadstring("\27LJ\2\n£\1\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2C<cmd>lua require'nvim-projectconfig'.edit_project_config()<cr>\15<leader>pc\6n\20nvim_set_keymap\bapi\bvim\0", "setup", "nvim-projectconfig")
+time([[Setup for nvim-projectconfig]], false)
+time([[packadd for nvim-projectconfig]], true)
+vim.cmd [[packadd nvim-projectconfig]]
+time([[packadd for nvim-projectconfig]], false)
 -- Config for: todo-comments.nvim
-time("Config for todo-comments.nvim", true)
+time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
-time("Config for todo-comments.nvim", false)
--- Config for: nvim-projectconfig
-time("Config for nvim-projectconfig", true)
-try_loadstring("\27LJ\2\nN\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\24load_project_config\23nvim-projectconfig\frequire\0", "config", "nvim-projectconfig")
-time("Config for nvim-projectconfig", false)
--- Config for: vim-system-copy
-time("Config for vim-system-copy", true)
-try_loadstring("\27LJ\2\nµ\1\0\0\2\0\a\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0)\1\1\0=\1\6\0K\0\1\0\23system_copy_silent\28xclip -sel clipboard -o\31system_paste#paste_command\25xclip -sel clipboard\29system_copy#copy_command\6g\bvim\0", "config", "vim-system-copy")
-time("Config for vim-system-copy", false)
--- Config for: auto-session
-time("Config for auto-session", true)
-try_loadstring("\27LJ\2\n¨\1\0\0\6\0\n\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0009\3\5\0039\3\6\3'\5\a\0B\3\2\2'\4\b\0&\3\4\3=\3\t\2B\0\2\1K\0\1\0\26auto_session_root_dir\15/sessions/\vconfig\fstdpath\afn\bvim\1\0\1\14log_level\nerror\nsetup\17auto-session\frequire\0", "config", "auto-session")
-time("Config for auto-session", false)
--- Config for: winteract.vim
-time("Config for winteract.vim", true)
-try_loadstring("\27LJ\2\ns\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\1\fnoremap\2\27:InteractiveWindow<cr>\15<leader>wi\6n\20nvim_set_keymap\bapi\bvim\0", "config", "winteract.vim")
-time("Config for winteract.vim", false)
--- Config for: session-lens
-time("Config for session-lens", true)
-try_loadstring("\27LJ\2\nï\1\0\0\6\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2\27<cmd>SearchSession<cr>\15<leader>ls\6n\20nvim_set_keymap\bapi\bvim\1\0\3\17prompt_title\28Pick your saved session\17shorten_path\1\rwinblend\3\0\nsetup\17session-lens\frequire\0", "config", "session-lens")
-time("Config for session-lens", false)
--- Config for: trouble.nvim
-time("Config for trouble.nvim", true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time("Config for trouble.nvim", false)
+time([[Config for todo-comments.nvim]], false)
 -- Config for: vim-slash
-time("Config for vim-slash", true)
+time([[Config for vim-slash]], true)
 try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0#noremap <plug>(slash-after) zz\bcmd\bvim\0", "config", "vim-slash")
-time("Config for vim-slash", false)
+time([[Config for vim-slash]], false)
+-- Config for: auto-session
+time([[Config for auto-session]], true)
+try_loadstring("\27LJ\2\n¨\1\0\0\6\0\n\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0009\3\5\0039\3\6\3'\5\a\0B\3\2\2'\4\b\0&\3\4\3=\3\t\2B\0\2\1K\0\1\0\26auto_session_root_dir\15/sessions/\vconfig\fstdpath\afn\bvim\1\0\1\14log_level\nerror\nsetup\17auto-session\frequire\0", "config", "auto-session")
+time([[Config for auto-session]], false)
+-- Config for: winteract.vim
+time([[Config for winteract.vim]], true)
+try_loadstring("\27LJ\2\ns\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\1\fnoremap\2\27:InteractiveWindow<cr>\15<leader>wi\6n\20nvim_set_keymap\bapi\bvim\0", "config", "winteract.vim")
+time([[Config for winteract.vim]], false)
+-- Config for: session-lens
+time([[Config for session-lens]], true)
+try_loadstring("\27LJ\2\nï\1\0\0\6\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\2\a\0'\3\b\0'\4\t\0005\5\n\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2\27<cmd>SearchSession<cr>\15<leader>ls\6n\20nvim_set_keymap\bapi\bvim\1\0\3\17prompt_title\28Pick your saved session\17shorten_path\1\rwinblend\3\0\nsetup\17session-lens\frequire\0", "config", "session-lens")
+time([[Config for session-lens]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
+-- Config for: vim-system-copy
+time([[Config for vim-system-copy]], true)
+try_loadstring("\27LJ\2\nµ\1\0\0\2\0\a\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0)\1\1\0=\1\6\0K\0\1\0\23system_copy_silent\28xclip -sel clipboard -o\31system_paste#paste_command\25xclip -sel clipboard\29system_copy#copy_command\6g\bvim\0", "config", "vim-system-copy")
+time([[Config for vim-system-copy]], false)
+-- Config for: nvim-projectconfig
+time([[Config for nvim-projectconfig]], true)
+try_loadstring("\27LJ\2\nN\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\24load_project_config\23nvim-projectconfig\frequire\0", "config", "nvim-projectconfig")
+time([[Config for nvim-projectconfig]], false)
 
 -- Command lazy-loads
-time("Defining lazy-load commands", true)
-vim.cmd [[command! -nargs=* -range -bang -complete=file OctoAddReviewSuggestion lua require("packer.load")({'octo.nvim'}, { cmd = "OctoAddReviewSuggestion", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-vim.cmd [[command! -nargs=* -range -bang -complete=file EasyAlign lua require("packer.load")({'vim-easy-align'}, { cmd = "EasyAlign", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+time([[Defining lazy-load commands]], true)
+vim.cmd [[command! -nargs=* -range -bang -complete=file LazyGitConfig lua require("packer.load")({'lazygit.nvim'}, { cmd = "LazyGitConfig", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 vim.cmd [[command! -nargs=* -range -bang -complete=file LazyGitFilter lua require("packer.load")({'lazygit.nvim'}, { cmd = "LazyGitFilter", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 vim.cmd [[command! -nargs=* -range -bang -complete=file Octo lua require("packer.load")({'octo.nvim'}, { cmd = "Octo", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-vim.cmd [[command! -nargs=* -range -bang -complete=file DD lua require("packer.load")({'vim-devdocs'}, { cmd = "DD", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-vim.cmd [[command! -nargs=* -range -bang -complete=file LazyGitConfig lua require("packer.load")({'lazygit.nvim'}, { cmd = "LazyGitConfig", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+vim.cmd [[command! -nargs=* -range -bang -complete=file OctoAddReviewComment lua require("packer.load")({'octo.nvim'}, { cmd = "OctoAddReviewComment", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+vim.cmd [[command! -nargs=* -range -bang -complete=file OctoAddReviewSuggestion lua require("packer.load")({'octo.nvim'}, { cmd = "OctoAddReviewSuggestion", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+vim.cmd [[command! -nargs=* -range -bang -complete=file MarkdownPreviewToggle lua require("packer.load")({'markdown-preview.nvim'}, { cmd = "MarkdownPreviewToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 vim.cmd [[command! -nargs=* -range -bang -complete=file FormatWrite lua require("packer.load")({'formatter.nvim'}, { cmd = "FormatWrite", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-vim.cmd [[command! -nargs=* -range -bang -complete=file Format lua require("packer.load")({'formatter.nvim'}, { cmd = "Format", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 vim.cmd [[command! -nargs=* -range -bang -complete=file DiffviewOpen lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewOpen", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-vim.cmd [[command! -nargs=* -range -bang -complete=file DiffviewClose lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewClose", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+vim.cmd [[command! -nargs=* -range -bang -complete=file DD lua require("packer.load")({'vim-devdocs'}, { cmd = "DD", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 vim.cmd [[command! -nargs=* -range -bang -complete=file DiffviewFocusFiles lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewFocusFiles", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 vim.cmd [[command! -nargs=* -range -bang -complete=file DiffviewToggleFiles lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewToggleFiles", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 vim.cmd [[command! -nargs=* -range -bang -complete=file DiffviewRefresh lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewRefresh", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-vim.cmd [[command! -nargs=* -range -bang -complete=file MarkdownPreviewToggle lua require("packer.load")({'markdown-preview.nvim'}, { cmd = "MarkdownPreviewToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+vim.cmd [[command! -nargs=* -range -bang -complete=file DiffviewClose lua require("packer.load")({'diffview.nvim'}, { cmd = "DiffviewClose", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+vim.cmd [[command! -nargs=* -range -bang -complete=file Format lua require("packer.load")({'formatter.nvim'}, { cmd = "Format", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+vim.cmd [[command! -nargs=* -range -bang -complete=file EasyAlign lua require("packer.load")({'vim-easy-align'}, { cmd = "EasyAlign", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
 vim.cmd [[command! -nargs=* -range -bang -complete=file LazyGit lua require("packer.load")({'lazygit.nvim'}, { cmd = "LazyGit", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-vim.cmd [[command! -nargs=* -range -bang -complete=file OctoAddReviewComment lua require("packer.load")({'octo.nvim'}, { cmd = "OctoAddReviewComment", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
-time("Defining lazy-load commands", false)
+time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
-time("Defining lazy-load filetype autocommands", true)
+time([[Defining lazy-load filetype autocommands]], true)
 vim.cmd [[au FileType svelte ++once lua require("packer.load")({'nvim-ts-autotag'}, { ft = "svelte" }, _G.packer_plugins)]]
-vim.cmd [[au FileType typescript ++once lua require("packer.load")({'nvim-ts-autotag'}, { ft = "typescript" }, _G.packer_plugins)]]
-vim.cmd [[au FileType typescriptreact ++once lua require("packer.load")({'nvim-ts-autotag'}, { ft = "typescriptreact" }, _G.packer_plugins)]]
+vim.cmd [[au FileType xonsh ++once lua require("packer.load")({'xonsh-vim'}, { ft = "xonsh" }, _G.packer_plugins)]]
+vim.cmd [[au FileType xsh ++once lua require("packer.load")({'xonsh-vim'}, { ft = "xsh" }, _G.packer_plugins)]]
 vim.cmd [[au FileType vue ++once lua require("packer.load")({'nvim-ts-autotag'}, { ft = "vue" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typescriptreact ++once lua require("packer.load")({'nvim-ts-autotag'}, { ft = "typescriptreact" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typescript ++once lua require("packer.load")({'nvim-ts-autotag'}, { ft = "typescript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'bullets.vim'}, { ft = "markdown" }, _G.packer_plugins)]]
 vim.cmd [[au FileType text ++once lua require("packer.load")({'bullets.vim'}, { ft = "text" }, _G.packer_plugins)]]
 vim.cmd [[au FileType latex ++once lua require("packer.load")({'bullets.vim'}, { ft = "latex" }, _G.packer_plugins)]]
 vim.cmd [[au FileType tex ++once lua require("packer.load")({'bullets.vim', 'vim-latex-preview'}, { ft = "tex" }, _G.packer_plugins)]]
-vim.cmd [[au FileType xsh ++once lua require("packer.load")({'xonsh-vim'}, { ft = "xsh" }, _G.packer_plugins)]]
-vim.cmd [[au FileType xonsh ++once lua require("packer.load")({'xonsh-vim'}, { ft = "xonsh" }, _G.packer_plugins)]]
 vim.cmd [[au FileType html ++once lua require("packer.load")({'nvim-ts-autotag'}, { ft = "html" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascript ++once lua require("packer.load")({'nvim-ts-autotag'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascriptreact ++once lua require("packer.load")({'nvim-ts-autotag'}, { ft = "javascriptreact" }, _G.packer_plugins)]]
-time("Defining lazy-load filetype autocommands", false)
+time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time("Sourcing ftdetect script at: /Users/mahbubur/.local/share/nvim/site/pack/packer/opt/xonsh-vim/ftdetect/xonsh.vim", true)
-vim.cmd [[source /Users/mahbubur/.local/share/nvim/site/pack/packer/opt/xonsh-vim/ftdetect/xonsh.vim]]
-time("Sourcing ftdetect script at: /Users/mahbubur/.local/share/nvim/site/pack/packer/opt/xonsh-vim/ftdetect/xonsh.vim", false)
-time("Sourcing ftdetect script at: /Users/mahbubur/.local/share/nvim/site/pack/packer/opt/vim-latex-preview/ftdetect/latex.vim", true)
+time([[Sourcing ftdetect script at: /Users/mahbubur/.local/share/nvim/site/pack/packer/opt/vim-latex-preview/ftdetect/latex.vim]], true)
 vim.cmd [[source /Users/mahbubur/.local/share/nvim/site/pack/packer/opt/vim-latex-preview/ftdetect/latex.vim]]
-time("Sourcing ftdetect script at: /Users/mahbubur/.local/share/nvim/site/pack/packer/opt/vim-latex-preview/ftdetect/latex.vim", false)
+time([[Sourcing ftdetect script at: /Users/mahbubur/.local/share/nvim/site/pack/packer/opt/vim-latex-preview/ftdetect/latex.vim]], false)
+time([[Sourcing ftdetect script at: /Users/mahbubur/.local/share/nvim/site/pack/packer/opt/xonsh-vim/ftdetect/xonsh.vim]], true)
+vim.cmd [[source /Users/mahbubur/.local/share/nvim/site/pack/packer/opt/xonsh-vim/ftdetect/xonsh.vim]]
+time([[Sourcing ftdetect script at: /Users/mahbubur/.local/share/nvim/site/pack/packer/opt/xonsh-vim/ftdetect/xonsh.vim]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 

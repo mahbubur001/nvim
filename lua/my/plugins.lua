@@ -133,11 +133,6 @@ return require('packer').startup(function(use)
     'gruvbox-community/gruvbox',
   }
 
-  -- nice and easy to use statusline
-  -- use {
-	--'hoob3rt/lualine.nvim',
-  -- }
-
   -- better quickfix window
   use {
     'kevinhwang91/nvim-bqf',

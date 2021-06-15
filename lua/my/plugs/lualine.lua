@@ -1,10 +1,9 @@
 require('lualine').setup {
   options = {
     theme = 'gruvbox',
-    section_separators = {'', ''},
+    section_separators = {'',''},
     component_separators = {'|', '|'},
     icons_enabled = true,
-    lower = true,
   },
   sections = {
     lualine_a = {'mode'},
@@ -52,4 +51,11 @@ require('lualine').setup {
     lualine_y = {'filetype'},
     lualine_z = {'location'},
   },
+  tabline = {
+        lualine_a = {'filetype'},
+        lualine_b = {'filename'},
+  },
+  extensions = {}
 }
+
+print('From lua lualine');
